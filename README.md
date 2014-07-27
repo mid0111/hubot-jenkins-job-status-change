@@ -12,7 +12,7 @@ $ npm install --save hubot-jenkins-job-status-change
 
 Then add "hubot-jenkins-job-status-change" to external-scripts.json.
 
-```javascript: external-scripts.json
+```javascript
 '["hubot-jenkins-job-status-change"]'
 ```
 
