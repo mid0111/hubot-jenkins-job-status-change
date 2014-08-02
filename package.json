@@ -1,6 +1,6 @@
 {
   "name": "hubot-jenkins-job-status-change",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "hubot script for jenkins to change jobs status (disable or enable).",
   "keywords": "hubot jenkins job disable",
   "repository": {
@@ -9,8 +9,5 @@
   },
   "main": "index.coffee",
   "author": "mid0111",
-  "license": "MIT",
-  "dependencies": {
-    "require": "^0.5.0"
-  }
+  "license": "MIT"
 }
