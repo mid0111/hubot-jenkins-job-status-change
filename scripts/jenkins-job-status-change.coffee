@@ -3,11 +3,15 @@ jobs = process.env.HUBOT_JENKINS_JOBS.split(',');
 jenkinsUrl = process.env.HUBOT_JENKINS_URL;
  
 module.exports = (robot) ->
-  robot.hear /j(?:enkins)? s(?:tatus[s]*)? (.*)/i, (msg) ->
+  robot.hear /j(?:enkins)? s(?:tatus*)? (.*)/i, (msg) ->
     process = msg.match[1]
  
-    if process isnt 'enable' and process isnt 'disable'
-      msg.send 'Usage: jenkins job [disable | enable]'
+    if process isnt 'enable' and process isnt 'disable' and process isnt 'list'
+      msg.send 'Usage: jenkins status [disable | enable | list]'
+      return
+
+    if process is 'list'
+      msg.send 'Target jobs list: [' + jobs + ']'
       return
 
     for job in jobs
@@ -21,3 +25,5 @@ module.exports = (robot) ->
             msg.send 'Failed to change status. host: [' + res.req._headers.host + '] path: [' + res.req.path+ '] code: [' + res.statusCode + ']'
           else
             msg.send 'success: [' + res.headers['location'] + '] '
+
+
