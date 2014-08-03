@@ -5,7 +5,7 @@ hubot-jenkins-job-status-change
 
 ## Description
 
-You can disable the specify jenkins's jobs, or enable it from hubot.  
+Allows hubot to disable the specify jenkins's jobs, or enable it from hubot.  
 The target jobs for this script are defined in environment variable.
 
 ## Usage
@@ -44,7 +44,7 @@ Then add "hubot-jenkins-job-status-change" to external-scripts.json.
 ["hubot-jenkins-job-status-change"]
 ```
 
-## Config
+## Configuration
 
 This script requires the following environment variables.
 
@@ -55,7 +55,7 @@ This script requires the following environment variables.
 
 If you use hubot under proxy environment, then you specify proxy settings.
 
-`HTTP_PROXY`: Proxy settings. "http://【ユーザ名】:【パスワード】@【Proxyサーバ】:【ポート番号】/"
+`HTTP_PROXY`: Proxy settings. "http://【UserName】:【password】@【ProxyHost】:【ProxyPort】/"
 
 ````bash
 $ HUBOT_JENKINS_USER_NAME="user" \
