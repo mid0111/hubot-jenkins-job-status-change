@@ -3,7 +3,7 @@ jobs = process.env.HUBOT_JENKINS_JOBS.split(',');
 jenkinsUrl = process.env.HUBOT_JENKINS_URL;
  
 module.exports = (robot) ->
-  robot.hear /j(?:enkins)? j(?:ob[s]*)? (.*)/i, (msg) ->
+  robot.hear /j(?:enkins)? s(?:tatus[s]*)? (.*)/i, (msg) ->
     process = msg.match[1]
  
     if process isnt 'enable' and process isnt 'disable'
