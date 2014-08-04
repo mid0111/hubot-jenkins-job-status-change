@@ -1,7 +1,7 @@
 {
   "name": "hubot-jenkins-job-status-change",
-  "version": "0.0.5",
-  "description": "hubot script for jenkins to change jobs status (disable or enable).",
+  "version": "1.0.0",
+  "description": "Hubot script for jenkins to change jobs status, disable or enable on batch processing.",
   "keywords": "hubot jenkins job disable",
   "repository": {
     "type": "git",
