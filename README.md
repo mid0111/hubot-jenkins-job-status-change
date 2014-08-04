@@ -1,7 +1,35 @@
 hubot-jenkins-job-status-change
-===============================
+=========================
 
-hubot script for jenkins to change jobs status (disable or enable).
+[hubot](https://github.com/github/hubot) script for jenkins to change jobs status, disable or enable on batch processing.
+
+## Description
+
+Allows hubot to disable the specify jenkins's jobs, or enable it from hubot.  
+The target jobs for this script are defined in environment variable.
+
+## Usage
+
+### disable jobs
+
+```bash
+> hubot jenkins status disable
+> hubot j s disable
+```
+
+### enable jobs
+
+```bash
+> hubot jenkins status enable
+> hubot j s enable
+```
+
+### list target jobs changed status by this script
+
+```bash
+> hubot jenkins status list
+> hubot j s list
+```
 
 ## Install
 
@@ -16,7 +44,7 @@ Then add "hubot-jenkins-job-status-change" to external-scripts.json.
 ["hubot-jenkins-job-status-change"]
 ```
 
-## Config
+## Configuration
 
 This script requires the following environment variables.
 
@@ -25,7 +53,11 @@ This script requires the following environment variables.
 `HUBOT_JENKINS_URL`: Jenkins root url. e.g. "http://127.0.0.1:8080/jenkins"  
 `HUBOT_JENKINS_JOBS`: Jenkins job name you want to change status by this script.You can specify multiple jobs, comma delimited. e.g. "test1, test2, hoge"  
 
-```bash
+If you use hubot under proxy environment, then you specify proxy settings.
+
+`HTTP_PROXY`: Proxy settings. "http://【UserName】:【password】@【ProxyHost】:【ProxyPort】/"
+
+````bash
 $ HUBOT_JENKINS_USER_NAME="user" \
 HUBOT_JENKINS_PASSWORD="password" \
 HUBOT_JENKINS_URL="http://127.0.0.1:8080/jenkins" \
@@ -33,9 +65,11 @@ HUBOT_JENKINS_JOBS="test1, test2, test3" \
 ./bin/hubot
 ```
 
-## Commands
+## Licence
 
-```
-hubot jenkins job disable
-hubot jenkins job enable
-```
+MIT
+
+## Author
+
+[mid0111](https://github.com/mid0111)
+
